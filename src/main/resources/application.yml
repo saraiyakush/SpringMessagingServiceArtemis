@@ -1,0 +1,17 @@
+# Keeping values the same as configured by Spring by default
+# Added here for brevity
+spring:
+  artemis:
+    host: localhost
+    port: 61617
+
+# Start embedded Artemis broker
+    mode: embedded
+    embedded:
+      enabled: true
+      queues:
+      - destination.queue
+
+logging:
+  level:
+    org.apache.activemq: WARN
